@@ -5,16 +5,24 @@ import Gurlz from '../images/smartgurlz.jpg';
 import Little from '../images/mylittleandi.jpg';
 import Vogue from '../images/voguewear.jpg';
 import Ned from '../images/ned.jpg';
+import Forum from '../images/forum.png';
  
 class Projects extends Component {
 
   componentWillMount() {
-    document.title = 'thewizbang.com - projects'
+    document.title = 'ericphillips.xyz - projects'
   }
 
   render() {
     return (
       <section className="content projects">
+      <div className="project-container">
+        <a href="http://jabandaja.com/generic_forum" rel="noopener noreferrer" target="_blank">
+          <img src={Forum} alt="generic forum" />
+          <h2>Generic Forum</h2>
+          <p>Recent personal project.<br/>A simple forum for some PHP practice.</p>
+        </a>
+      </div>
         <div className="project-container">
           <a href="https://meattown.com/" rel="noopener noreferrer" target="_blank">
             <img src={Meattown} alt="meattown" />

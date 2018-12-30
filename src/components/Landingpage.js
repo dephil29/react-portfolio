@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 class Info extends Component {
 
   componentWillMount() {
-    document.title = 'thewizbang.com'
+    document.title = 'ericphillips.xyz'
   }
 
   render() {
     return (
       <div className="content">
         <h2 className="content-text">Hello. I am a web developer looking to put experience into action. 
-        Most of my experience so far has been customizing Shopify websites using CSS, Javascript, Jquery, and 
-        Shopify's own language, Liquid. As you may have seen elsewhere on the site this site was built 
-        with React, so I do have some experience with that as well.</h2>
+        Most of my professional experience so far has been customizing Shopify websites using CSS, Javascript, Jquery, and 
+        Shopify's own language, Liquid. I have also worked with React(this site), CodeIgniter, and various Node technologies
+        on personal projects, which can be seen on my 
+        <a href="https://www.github.com/dephil29" rel="noopener noreferrer" target="_blank">github</a> account.</h2>
       </div>
     );
   }

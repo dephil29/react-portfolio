@@ -27,6 +27,7 @@ a,
 span{
   color: white;
   margin: 0;
+  text-align: justify;
 }
 
 a{
@@ -174,6 +175,12 @@ footer h4{
   .projects{
     flex-direction: column;
     align-content: center;
+  }
+}
+
+@media(max-width: 660px){
+  .content{
+    max-width: 100%;
   }
 }
 

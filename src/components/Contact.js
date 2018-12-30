@@ -3,15 +3,21 @@ import React, { Component } from 'react';
 class Contact extends Component {
 
   componentWillMount() {
-    document.title = 'thewizbang.com - contact'
+    document.title = 'ericphillips.xyz - contact'
   }
 
   render() {
     return (
       <div className="content contact">
-        <h2>eric@thewizbang.com</h2>
+        <h2>dephil29@hotmail.com</h2>
         <h2>
-          <a href="https://www.linkedin.com/in/eric-phillips-19a287bb/" rel="noopener noreferrer" target="_blank">My linkedin account</a>
+          <a href="https://www.github.com/dephil29" rel="noopener noreferrer" target="_blank">github</a>
+        </h2>
+        <h2>
+          <a href="https://www.linkedin.com/in/eric-phillips-19a287bb/" rel="noopener noreferrer" target="_blank">linkedin</a>
+        </h2>
+        <h2>
+          <a href="http://www.ericphillips.xyz/resume" rel="noopener noreferrer" target="_blank">resume</a>
         </h2>
       </div>
     );
