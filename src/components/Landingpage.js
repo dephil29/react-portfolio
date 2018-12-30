@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+  const link = {
+    textDecoration: 'underline'
+  };
  
 class Info extends Component {
 
@@ -12,8 +16,7 @@ class Info extends Component {
         <h2 className="content-text">Hello. I am a web developer looking to put experience into action. 
         Most of my professional experience so far has been customizing Shopify websites using CSS, Javascript, Jquery, and 
         Shopify's own language, Liquid. I have also worked with React(this site), CodeIgniter, and various Node technologies
-        on personal projects, which can be seen on my 
-        <a href="https://www.github.com/dephil29" rel="noopener noreferrer" target="_blank">github</a> account.</h2>
+        on personal projects, which can be seen on my <a style={link} href="https://www.github.com/dephil29" rel="noopener noreferrer" target="_blank">github</a> account.</h2>
       </div>
     );
   }

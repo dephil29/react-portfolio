@@ -135,6 +135,7 @@ footer h4{
 
 .content-text{
   max-width: 500px;
+  display: inline-block
 }
 
 @media(max-width: 658px){
