@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Meattown from '../images/meattown.jpg';
-import Ary from '../images/aryconcept.jpg';
-import Gurlz from '../images/smartgurlz.jpg';
-import Little from '../images/mylittleandi.jpg';
-import Vogue from '../images/voguewear.jpg';
-import Ned from '../images/ned.jpg';
+import Meattown from '../images/meattown.png';
+import Ary from '../images/ary.png';
+import Gurlz from '../images/smartgurlz.png';
+import Little from '../images/little.png';
+import Vogue from '../images/vogue.png';
+import Ned from '../images/ned.png';
 import Forum from '../images/forum.jpg';
  
 class Projects extends Component {
