@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Meattown from '../images/meattown.png';
-import Ary from '../images/ary.png';
-import Gurlz from '../images/smartgurlz.png';
-import Little from '../images/little.png';
-import Vogue from '../images/vogue.png';
-import Ned from '../images/ned.png';
+import Meattown from '../images/meattown.jpg';
+import Ary from '../images/ary.jpg';
+import Gurlz from '../images/smartgurlz.jpg';
+import Little from '../images/little.jpg';
+import Vogue from '../images/vogue.jpg';
+import Ned from '../images/ned.jpg';
 import Forum from '../images/forum.jpg';
+import Hacker from '../images/hacker.jpg';
+import Burger from '../images/burger.png';
  
 class Projects extends Component {
 
@@ -15,14 +17,9 @@ class Projects extends Component {
 
   render() {
     return (
-      <section className="content projects">
-      <div className="project-container">
-        <a href="http://jabandaja.com/generic_forum" rel="noopener noreferrer" target="_blank">
-          <img src={Forum} alt="generic forum" />
-          <h2>Generic Forum</h2>
-          <p>Recent personal project.<br/>A simple forum for some PHP practice.</p>
-        </a>
-      </div>
+      <section className="content projects-section">
+      <h1 class="title">PROFESSIONAL</h1>
+      <div class="projects-container">
         <div className="project-container">
           <a href="https://meattown.com/" rel="noopener noreferrer" target="_blank">
             <img src={Meattown} alt="meattown" />
@@ -65,6 +62,31 @@ class Projects extends Component {
             <p>Shopify site.<br/>Custom home page sections for product information display. Several custom product page templates for unique pages for each product. Heavily redesigned header and mega menu.</p>
           </a>
         </div>
+      </div>
+      <h1 class="title">PERSONAL</h1>
+      <div class="projects-container">
+        <div className="project-container">
+          <a href="http://jabandaja.com/generic_forum" rel="noopener noreferrer" target="_blank">
+            <img src={Forum} alt="generic forum" />
+            <h2>Generic Forum</h2>
+            <p>A forum built with PHP/CodeIgniter.</p>
+          </a>
+        </div>
+        <div className="project-container">
+          <a href="http://ericphillips.xyz/hacker-news" rel="noopener noreferrer" target="_blank">
+            <img src={Hacker} alt="fake hacker news" />
+            <h2>Hacker News</h2>
+            <p>React, API and search functionality practice.</p>
+          </a>
+        </div>
+        <div className="project-container">
+          <a href="http://ericphillips.xyz/burger-builder" rel="noopener noreferrer" target="_blank">
+            <img src={Burger} alt="burger builder" />
+            <h2>Burger Builder</h2>
+            <p>React/Redux/Firebase burger ordering machine.</p>
+          </a>
+        </div>
+      </div>
       </section>
     );
   }

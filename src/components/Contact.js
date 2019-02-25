@@ -16,9 +16,6 @@ class Contact extends Component {
         <h2>
           <a href="https://www.linkedin.com/in/eric-phillips-19a287bb/" rel="noopener noreferrer" target="_blank">linkedin</a>
         </h2>
-        <h2>
-          <a href="http://www.ericphillips.xyz/resume" rel="noopener noreferrer" target="_blank">resume</a>
-        </h2>
       </div>
     );
   }

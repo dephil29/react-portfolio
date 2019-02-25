@@ -148,10 +148,13 @@ footer h4{
 
 /* projects page */
 
-.projects{
-  align-items: flex-start;
+.projects-section{
+  display: block;
+}
+
+.projects-container{
+  display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .project-container{
@@ -186,13 +189,13 @@ footer h4{
 }
 
 @media(max-width: 600px){
-  .projects img{
+  .projects-section img{
     height: 430px;
   }
 }
 
 @media(max-width: 520px){
-  .projects img{
+  .projects-section img{
     height: 250px;
   }
   .project-container h2, .project-container p{
