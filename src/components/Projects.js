@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Meattown from '../images/meattown.jpg';
 import Ary from '../images/ary.jpg';
-import Gurlz from '../images/smartgurlz.jpg';
 import Little from '../images/little.jpg';
-import Vogue from '../images/vogue.jpg';
 import Ned from '../images/ned.jpg';
 import Forum from '../images/forum.jpg';
 import Hacker from '../images/hacker.jpg';
@@ -35,24 +33,10 @@ class Projects extends Component {
           </a>
         </div>
         <div className="project-container">
-          <a href="https://smartgurlz.com/" rel="noopener noreferrer" target="_blank">
-            <img src={Gurlz} alt="Smartgurlz" />
-            <h2>SmartGurlz</h2>
-            <p>Shopify site.<br/>Several custom sections, including two YouTube modals and homepage product display. Heavily customized product page.</p>
-          </a>
-        </div>
-        <div className="project-container">
           <a href="https://mylittleandi.com/" rel="noopener noreferrer" target="_blank">
             <img src={Little} alt="My Little and I" />
             <h2>My Little and I</h2>
             <p>Shopify site.<br/>Original Instagram display section, and collection pages designed specifically for multiple product orders.</p>
-          </a>
-        </div>
-        <div className="project-container">
-          <a href="https://thevoguewear.com/" rel="noopener noreferrer" target="_blank">
-            <img src={Vogue} alt="Vogue Wear" />
-            <h2>The Vogue Wear</h2>
-            <p>Shopify site.<br/>Heavily customized site based on mockup provided by the client. Configuration of collections to auto-assign large amounts of inventory to their proper places with minimal interaction on the part of the client.</p>
           </a>
         </div>
         <div className="project-container">
