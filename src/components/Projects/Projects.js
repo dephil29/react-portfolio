@@ -8,6 +8,8 @@ import Ned from '../../images/ned.jpg';
 import Forum from '../../images/forum.jpg';
 import Hacker from '../../images/hacker.jpg';
 import Burger from '../../images/burger.png';
+import Atlar from '../../images/atlar.png';
+import Smartgurlz from '../../images/smartgurlz.jpg';
  
 class Projects extends Component {
   state = { imageStatus: false };
@@ -105,6 +107,44 @@ class Projects extends Component {
               />
               <h2>Ned</h2>
               <p>Shopify site.<br/>Custom home page sections for product information display. Several custom product page templates for unique pages for each product. Heavily redesigned header and mega menu.</p>
+            </a>
+          </LazyLoad>
+          <LazyLoad 
+            className="project-container"
+            debounce={false}
+            throttle={250}
+          >
+            <a href="https://theatlar.com/" rel="noopener noreferrer" target="_blank">
+              <img 
+                src={Atlar} 
+                alt="The Atlar" 
+                onLoad={this.handleImageLoaded.bind(this)} 
+                style={{
+                  transition: 'opacity 0.5s',
+                  opacity: !imgState ? '0' : '1'
+                }}
+              />
+              <h2>The Atlar</h2>
+              <p>Shopify site.<br/>This was more of a triumph of creative inventory management to make sure that the correct products showed up in their proper collections than anything to do with web design.</p>
+            </a>
+          </LazyLoad>
+          <LazyLoad 
+            className="project-container"
+            debounce={false}
+            throttle={250}
+          >
+            <a href="https://smartgurlz.com/" rel="noopener noreferrer" target="_blank">
+              <img 
+                src={Smartgurlz} 
+                alt="Smartgurlz" 
+                onLoad={this.handleImageLoaded.bind(this)} 
+                style={{
+                  transition: 'opacity 0.5s',
+                  opacity: !imgState ? '0' : '1'
+                }}
+              />
+              <h2>Smartgurlz</h2>
+              <p>Shopify site.<br/>Several custom features on the home page and product pages are completely hand coded according to the clients wishes.</p>
             </a>
           </LazyLoad>
         </div>
