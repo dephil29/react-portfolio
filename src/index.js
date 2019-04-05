@@ -12,9 +12,9 @@ import './index.css';
 
 ReactDOM.render(
   <BrowserRouter >
-    <div className="thewholething">
+    <React.Fragment>
       <Header />
       <Main />
-    </div>
+    </React.Fragment>
   </BrowserRouter>,document.getElementById('root')
 );

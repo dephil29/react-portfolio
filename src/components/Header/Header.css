@@ -31,3 +31,9 @@ header{
   margin: 0;
   height: 2px;  
 }
+
+@supports (-ms-ime-align:auto) {
+  .header-content-links-container{
+    justify-content: space-around;
+  }
+}

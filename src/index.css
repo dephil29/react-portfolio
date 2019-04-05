@@ -38,7 +38,7 @@ code {
     monospace;
 }
 
-.thewholething{
+#root{
   background: white;
 }
 
@@ -135,16 +135,6 @@ code {
 }
 
 /* end contacts page */
-
-/* browser supports */
-
-@supports (-ms-ime-align:auto) {
-  .header-content-links-container{
-    justify-content: space-around;
-  }
-}
-
-/* end browser supports */
 
 /* test */
 
