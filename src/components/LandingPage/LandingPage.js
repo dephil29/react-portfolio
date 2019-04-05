@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 // styles
 import './LandingPage.css';
-
 const styles = {
   landing: {
     height: '100vh',
@@ -14,10 +13,6 @@ const styles = {
 };
  
 class Info extends Component {
-
-  componentWillMount() {
-    document.title = 'ericphillips.xyz'
-  }
 
   render() {
     return (
