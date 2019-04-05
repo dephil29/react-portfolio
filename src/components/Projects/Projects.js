@@ -1,43 +1,30 @@
-import React, {Component} from 'react';
+// dependencies
+import React, {useEffect} from 'react';
+
+// data
 import {professional, personal} from './info';
+
+// component
 import Project from './Project';
  
-class Projects extends Component {
-  state = {
-    loading: true
-  };
+const Projects = () => {
 
-  componentDidMount(){
-    this.setState({
-      loading: false
-    })
-  };
+  useEffect(() => {
+    document.title = 'ericphillips.xyz - projects'
+  });
 
-  onChildLoad = () => {
-    this.setState({
-      loading: false
-    })
-  }
-
-  render(){
-    const loading = this.state.loading;
-    return (
-      <section className="content projects-section">
-        <h2 className="title">PROFESSIONAL</h2>
-        <div className="projects-container">
-          {loading ? <p>loading</p> :
-            <Project items={professional} />
-          }
-        </div>
-        <h2 className="title">PERSONAL</h2>
-        <div className="projects-container">
-          {loading ? <p>loading</p> :
-            <Project items={personal} />
-          }
-        </div>
-      </section>
-    );  
-  }
+  return (
+    <section className="content projects-section">
+      <h2 className="title">PROFESSIONAL</h2>
+      <div className="projects-container">
+        <Project items={professional} />
+      </div>
+      <h2 className="title">PERSONAL</h2>
+      <div className="projects-container">
+        <Project items={personal} />
+      </div>
+    </section>
+  );  
 };
 
 export default Projects;

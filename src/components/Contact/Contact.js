@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
- 
-class Contact extends Component {
+// dependencies
+import React, { useEffect } from 'react';
 
-  componentWillMount() {
+// styles
+const style = {
+  height: '100vh',
+  padding: '0'
+}
+const Contact = () => {
+
+  useEffect(() => {
     document.title = 'ericphillips.xyz - contact'
-  }
+  })
 
-  render() {
+  // render() {
     return (
-      <div className="content contact">
+      <div 
+        className="content contact"
+        style={style}
+      >
         <h2>dephil29@hotmail.com</h2>
         <h2>
           <a href="https://www.github.com/dephil29" rel="noopener noreferrer" target="_blank">github</a>
@@ -18,7 +27,7 @@ class Contact extends Component {
         </h2>
       </div>
     );
-  }
+  // }
 }
 
 export default Contact;
