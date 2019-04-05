@@ -1,7 +1,4 @@
 /* common */
-html{
-  scrollbar-width: none;
-}
 
 body {
   margin: 0;
@@ -10,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: white;
   font-family: Helvetica;
-}
-
-::-webkit-scrollbar {
-  width: 0;
 }
 
 h1,
@@ -132,6 +125,11 @@ footer h4{
 
 /* landing page */
 
+.landing{
+  height: 100vh;
+  padding: 0;
+}
+
 
 .content-text{
   max-width: 500px;
@@ -165,7 +163,7 @@ footer h4{
 
 .project-container img{
   height: 500px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .project-container h2, .project-container p{
@@ -228,3 +226,31 @@ footer h4{
 }
 
 /* end browser supports */
+
+/* test */
+
+@keyframes fadeInImg{
+  from{
+    opacity: 0;
+  }  
+  to{
+    opacity: 1;
+  }
+}
+
+.img-loading{
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+
+.img-loaded{
+  animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 2.7s;
+  animation-delay: 2.1s; 
+}
+
+/* end test */
