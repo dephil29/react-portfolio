@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 // components
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import Main from './components/Main';
 //style
 import './index.css';

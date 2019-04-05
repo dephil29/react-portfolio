@@ -1,15 +1,16 @@
-
+// dependencies
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Landingpage from './Landingpage';
-import Contact from './Contact';
+// components
+import Contact from './Contact/Contact';
+import LandingPage from './LandingPage/LandingPage';
 import Projects from './Projects/Projects';
 
 
 const Main = () => (
   <Switch>
-    <Route exact path="/" component={Landingpage} />
+    <Route exact path="/" component={LandingPage} />
     <Route path="/contact" component={Contact} />
     <Route path="/projects" component={Projects} />
   </Switch>

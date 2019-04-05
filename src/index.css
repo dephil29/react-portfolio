@@ -1,5 +1,4 @@
 /* common */
-
 body {
   margin: 0;
   padding: 0;
@@ -43,54 +42,9 @@ code {
   background: white;
 }
 
-header{
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-}
-
 .title{
   text-align: center;
   padding: 10px 0;
-}
-
-.nav{
-  position: absolute;
-  top: 54px;
-  width: 100%;
-  background: black;
-  padding: 20px 0;
-  z-index: 0;
-}
-
-.header-content-links-container{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
-.header-content-links a{
-  color: white;
-}
-
-.nav-border{
-  position: absolute;
-  bottom: 3px;
-  width: 100%;
-  color: white;
-  background: white;
-  margin: 0;
-  height: 2px;  
-}
-
-.svg-container{
-  padding-top: 60px;
-  height: 300px;
-}
-
-.arrow-svg{
-  height: 100px;
-  fill: black;
 }
 
 .content{
@@ -108,41 +62,7 @@ header{
   z-index: 1;
 }
 
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  border-top: 2px solid black;
-  z-index: 2;
-}
-
-footer h4{
-  padding: 20px 0;  
-}
-
 /* end common */
-
-/* landing page */
-
-.landing{
-  height: 100vh;
-  padding: 0;
-}
-
-
-.content-text{
-  max-width: 500px;
-  display: inline-block
-}
-
-@media(max-width: 658px){
-  .content-text{
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
-/* end landing page */
 
 /* projects page */
 
@@ -163,7 +83,6 @@ footer h4{
 
 .project-container img{
   height: 500px;
-  /* border: 1px solid black; */
 }
 
 .project-container h2, .project-container p{
