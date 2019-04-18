@@ -30,7 +30,6 @@ const Projects = () => {
     const handleResize = () => {
       setWidth(window.innerWidth < 745 ? window.innerWidth * 0.75 : 600);
       setMargin(window.innerHeight < 720 ? 0 : 300);
-      console.log('oman')
     }
 
     window.addEventListener('resize', handleResize);
@@ -40,20 +39,7 @@ const Projects = () => {
   useEffect(() => {
     document.title = 'projects - ericphillips.xyz';
   });
-
-  // useEffect(() => {
-  //   return () => {  
-  //     try {
-  //       window.scroll({
-  //         top: 0,
-  //         left: 0,
-  //         behavior: 'smooth',
-  //       });
-  //     } catch (error) {
-  //       window.scrollTo(0, 0);
-  //     }
-  //   }
-  // }, []);
+  
   scrollToTop();
 
   const styles ={

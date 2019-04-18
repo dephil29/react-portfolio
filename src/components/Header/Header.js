@@ -36,20 +36,17 @@ const Header = () => {
         <NavLink 
           activeClassName='active'
           exact
-          // onClick={[toggle, top]}
           onClick={toggle}
           to="/">INTRO</NavLink><br/>
         <NavLink 
           activeClassName='active'
           exact
-          // onClick={[toggle, top]}
           onClick={toggle}
           to="/projects">
           PROJECTS</NavLink><br/>
         <NavLink 
           activeClassName='active'
           exact
-          // onClick={[toggle, top]}
           onClick={toggle}
           to="/contact">
           CONTACT</NavLink>
