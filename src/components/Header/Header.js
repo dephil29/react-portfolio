@@ -1,31 +1,66 @@
-// dependencies
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-// styles
-import './Header.css';
+const Header = () => {
 
-class Header extends Component {
-  render() {
-    return (
-      <header>
-        <h1 className="title">
-          <Link to="/">ERIC PHILLIPS</Link>
-        </h1>
-        <div className="nav">
-          <div className="header-content-links-container"> 
-            <div className="header-content-links">
-              <Link to="/projects">PROJECTS</Link>
-            </div>
-            <div className="header-content-links">
-              <Link to="/contact">CONTACT</Link>
-            </div>
-          </div>
-          <div className="nav-border"></div>
-        </div>
-      </header>
-    )
+  const [view, changeView] = useState(false);
+
+  const toggle = () => {
+    changeView((view === true) ? false: true);
   }
+
+  let navToggle;
+
+  if(!view){
+    navToggle = 'nav'
+  }else{
+    navToggle = 'nav show'
+  }
+
+  return (
+    <header>
+      <button 
+        className={
+          view
+          ? 'hamburger hamburger--collapse is-active'
+          : 'hamburger hamburger--collapse'
+        } 
+        onClick={toggle} >
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>
+      <div 
+        className={navToggle}
+      >
+        <NavLink 
+          activeClassName='active'
+          exact
+          // onClick={[toggle, top]}
+          onClick={toggle}
+          to="/">INTRO</NavLink><br/>
+        <NavLink 
+          activeClassName='active'
+          exact
+          // onClick={[toggle, top]}
+          onClick={toggle}
+          to="/projects">
+          PROJECTS</NavLink><br/>
+        <NavLink 
+          activeClassName='active'
+          exact
+          // onClick={[toggle, top]}
+          onClick={toggle}
+          to="/contact">
+          CONTACT</NavLink>
+      </div>
+      <h1 style={{
+        position: 'fixed',
+        top: '0',
+        right: '0'
+      }}>ericphillips.xyz</h1>
+    </header>
+  )
 }
 
 export default Header;

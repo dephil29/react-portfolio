@@ -1,10 +1,13 @@
 /* common */
+html {
+  background: black;
+}
+
 body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
   font-family: Helvetica;
 }
 
@@ -16,21 +19,10 @@ h5,
 h6,
 p,
 a,
-span{
-  color: black;
+span {
+  color: white;
   margin: 0;
   text-align: justify;
-}
-
-a{
-  text-decoration: none;
-}
-
-div,
-header,
-footer,
-section{
-  background: inherit;
 }
 
 code {
@@ -38,25 +30,27 @@ code {
     monospace;
 }
 
-#root{
-  background: white;
+:focus {
+  outline: none
 }
 
-.title{
+#root {
+  background: black;
+}
+
+.title {
   text-align: center;
   padding: 10px 0;
 }
 
-.content{
+.content {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 auto;
-  min-height: calc(100vh - 115.34px);
-  max-width: 85%;
+  height: 100vh;
   margin: 0 auto;
-  padding: 120px 0 60px 0;
+  padding: 0;
   border-left: 2px solid black;
   border-right: 2px solid black;
   z-index: 1;
@@ -64,36 +58,228 @@ code {
 
 /* end common */
 
-/* projects page */
+/* header */
 
-.projects-section{
+header {
+  position: fixed;
+  z-index: 2;
+  height: 44px;
+  width: 100%;
+  background: black;
+}
+
+.nav {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
+  background: black;
+  -webkit-transition: width linear 0.4s;
+  -moz-transition: width linear 0.4s;
+  -o-transition: width linear 0.4s;
+  transition: width linear 0.4s;
+}
+
+.nav a {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.show {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  margin-right: 50px;
+  border-right: 1px solid white;
+}
+
+.active{
+  text-decoration: none;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 8px 4px;
+  display: block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 100;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 0;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
   display: block;
 }
 
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* end header */
+
+/* landing page */
+
+.content-text {
+  max-width: 500px;
+  display: inline-block
+}
+
+/* end landing page */
+
+/* projects page */
+
+.projects-section{
+  height: 100vh;
+}
+
 .projects-container{
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  height: 100vh;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .project-container{
-  width: 50%;
-  text-align: center;
-  padding: 40px 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.shown {
+  opacity: 1;
+  z-index: 2;
 }
 
 .project-container img{
-  height: 500px;
+  width: 100%;
+  border: 1px solid white;
 }
 
-.project-container h2, .project-container p{
-  max-width: 500px;
-  margin: 5px auto;
+/* endprojects page */
+
+/* contacts page */
+
+.contact {
+  flex-direction: column;
 }
+
+.contact h2 {
+  margin-bottom: 5px;
+}
+
+/* end contacts page */
+
+/* media queries */
 
 @media(max-width: 1232px){
-  .project-container{
-    width: 100%;
-  }
   .projects{
     flex-direction: column;
     align-content: center;
@@ -106,60 +292,22 @@ code {
   }
 }
 
-@media(max-width: 600px){
-  .projects-section img{
-    height: 430px;
+@media(max-height: 720px) {
+  .content {
+    align-items: flex-start;
+    top: 80px;
+  }
+
+  .projects-page {
+    top: 44px;
+  }
+
+  .projects-container {
+    top: 44px;
+    height: auto;
+  }
+
+  .contact{
+    align-items: center;
   }
 }
-
-@media(max-width: 520px){
-  .projects-section img{
-    height: 250px;
-  }
-  .project-container h2, .project-container p{
-    max-width: 85%;
-    margin: 5px auto;
-  }
-}
-
-/* end projects page */
-
-/* contacts page */
-
-.contact{
-  flex-direction: column;
-}
-
-.contact h2{
-  margin-bottom: 5px;
-}
-
-/* end contacts page */
-
-/* test */
-
-@keyframes fadeInImg{
-  from{
-    opacity: 0;
-  }  
-  to{
-    opacity: 1;
-  }
-}
-
-.img-loading{
-  opacity: 0;
-  width: 100%;
-  height: auto;
-}
-
-.img-loaded{
-  animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1);
-  position: relative;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 2.7s;
-  animation-delay: 2.1s; 
-}
-
-/* end test */
