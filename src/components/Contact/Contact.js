@@ -14,7 +14,7 @@ const Contact = () => {
     <div 
       className="content contact"
     >
-      <h2>dephil29@hotmail.com</h2>
+      <h2>eric@ericphillips.xyz</h2>
       <h2>
         <a href="https://www.github.com/dephil29" rel="noopener noreferrer" target="_blank">github</a>
       </h2>

@@ -6,23 +6,6 @@ import scrollToTop from '../scrollToTop/scrollToTop';
 const Projects = () => {
 
   const [counter, setCounter] = useState(0);
-  
-  const left = () => {
-    if(counter === 0){
-      setCounter(8)
-    }else{
-      setCounter(counter - 1)
-    }
-  }
-
-  const right = () => {
-    if(counter === 8){
-      setCounter(0)
-    }else{
-      setCounter(counter + 1)
-    }    
-  }
-
   const [width, setWidth] = useState(window.innerWidth < 745 ? window.innerWidth * 0.75 : 600);
   const [margin, setMargin] = useState(window.innerHeight < 720 ? 0 : 300);
   
@@ -39,10 +22,28 @@ const Projects = () => {
   useEffect(() => {
     document.title = 'projects - ericphillips.xyz';
   });
-  
+
+  const dataLength = data.length - 1;
+
+  const left = () => {
+    if(counter === 0){
+      setCounter(dataLength)
+    }else{
+      setCounter(counter - 1)
+    }
+  }
+
+  const right = () => {
+    if(counter === dataLength){
+      setCounter(0)
+    }else{
+      setCounter(counter + 1)
+    }    
+  }
+
   scrollToTop();
 
-  const styles ={
+  const styles = {
     button: {
       position: 'absolute',
       bottom: '50%',

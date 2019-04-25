@@ -4,7 +4,6 @@ import Little from '../../images/little.jpg';
 import Ned from '../../images/ned.jpg';
 import Atlar from '../../images/atlar.png';
 import Smartgurlz from '../../images/smartgurlz.jpg';
-import Forum from '../../images/forum.jpg';
 import Hacker from '../../images/hacker.jpg';
 import Burger from '../../images/burger.png';
 
@@ -56,13 +55,6 @@ const data = [
     "title": "The Atlar",
     "type": "Shopify",
     "desc": "This was more of a triumph of creative inventory management to make sure that the correct products showed up in their proper collections than anything to do with web design."
-  },
-  {
-    "projectType": "personal",
-    "link": "https://jabandaja.com/generic_forum",
-    "imgSrc": Forum,
-    "title": "Generic Forum",
-    "desc": "A forum built with PHP/CodeIgniter."
   },
   {
     "projectType": "personal",

@@ -51,11 +51,13 @@ const Header = () => {
           to="/contact">
           CONTACT</NavLink>
       </div>
-      <h1 style={{
-        position: 'fixed',
-        top: '0',
-        right: '0'
-      }}>ericphillips.xyz</h1>
+      <h1 
+        style={{
+          position: 'fixed',
+          top: '0',
+          right: '0'
+        }}
+      >ericphillips.xyz</h1>
     </header>
   )
 }
