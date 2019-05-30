@@ -1,11 +1,11 @@
 import Meattown from '../../images/meattown.jpg';
-import Ary from '../../images/ary.jpg';
 import Little from '../../images/little.jpg';
 import Ned from '../../images/ned.jpg';
 import Atlar from '../../images/atlar.png';
 import Smartgurlz from '../../images/smartgurlz.jpg';
 import Hacker from '../../images/hacker.jpg';
 import Burger from '../../images/burger.png';
+import Forum from '../../images/forum.png';
 
 const data = [
   {
@@ -15,14 +15,6 @@ const data = [
     "title": "Smartgurlz",
     "type": "Shopify",
     "desc": "Several custom features on the home page and product pages are completely hand coded according to the clients wishes."
-  },
-  {
-    "projectType": "professional",
-    "link": "http://aryconcept.com/",
-    "imgSrc": Ary,
-    "title": "Ary Concept",
-    "type": "Wordpress",
-    "desc": "Built on Divi. Contents of homepage between header and footer is totally customized, as well as the modal and slider on the 'services' pages. Individual pages also highly customized including modal and slider."
   },
   {
     "projectType": "professional",
@@ -69,6 +61,13 @@ const data = [
     "imgSrc": Burger,
     "title": "Burger Builder",
     "desc": "React/Redux/Firebase burger ordering machine."
+  },
+  {
+    "projectType": "personal",
+    "link": "https://jabandaja.com/generic_forum",
+    "imgSrc": Forum,
+    "title": "Generic Forum",
+    "desc": "Forum site built with PHP/CodeIgniter."
   }
 ];
 
