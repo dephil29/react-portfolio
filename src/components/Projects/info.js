@@ -46,7 +46,7 @@ const data = [
   },
   {
     projectType: "personal",
-    link: "https://ericphillips.xyz/gdghghsdf",
+    link: "https://ericphillips.xyz/flickr",
     imgSrc: Flickr,
     title: "Flickr Photo Search",
     desc: "Photo search app using flickr api."
